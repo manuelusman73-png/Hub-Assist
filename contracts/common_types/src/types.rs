@@ -135,7 +135,7 @@ pub struct UserAttendanceStats {
 }
 
 #[contracttype]
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum SubscriptionStatus {
     Active,
     Cancelled,

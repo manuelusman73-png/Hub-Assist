@@ -1,7 +1,7 @@
 use soroban_sdk::{contracttype, Address, Vec};
 
 #[contracttype]
-#[derive(Clone, Copy, PartialEq, PartialOrd)]
+#[derive(Clone, Copy, PartialEq, PartialOrd, Debug)]
 pub enum UserRole {
     Guest  = 0,
     Member = 1,
@@ -48,7 +48,7 @@ pub struct AccessControlConfig {
 }
 
 #[contracttype]
-#[derive(Clone)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct MembershipInfo {
     pub user: Address,
     pub role: UserRole,

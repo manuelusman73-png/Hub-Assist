@@ -17,7 +17,7 @@ pub enum ContractError {
 }
 
 #[contracttype]
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum MembershipStatus {
     Active,
     Expired,
@@ -26,7 +26,7 @@ pub enum MembershipStatus {
 }
 
 #[contracttype]
-#[derive(Clone)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct MembershipToken {
     pub id: u64,
     pub owner: Address,

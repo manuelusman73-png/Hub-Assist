@@ -12,7 +12,7 @@ pub enum WorkspaceType {
 }
 
 #[contracttype]
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum UnavailabilityReason {
     UnderMaintenance,
     FullyBooked,
@@ -20,7 +20,7 @@ pub enum UnavailabilityReason {
 }
 
 #[contracttype]
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum WorkspaceAvailability {
     Available,
     Unavailable(UnavailabilityReason),
@@ -38,7 +38,7 @@ pub struct Workspace {
 }
 
 #[contracttype]
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum BookingStatus {
     Pending,
     Confirmed,
